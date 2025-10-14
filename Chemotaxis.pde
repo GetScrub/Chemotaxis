@@ -4,14 +4,14 @@
    int myCol1, myCol2, myCol3, myOpacity;
    int danger, dangerRequirement, dangerLevel;
    int[] radii = {0,0,100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
-   boolean show;
+   boolean showw;
    Bacteria(){
      myX=500;
      myY=500;
      myCol1 = (int)(Math.random()*256);
      myCol2 = (int)(Math.random()*256);
      myCol3 = (int)(Math.random()*256);
-     show = true;
+     showw = true;
      danger = 0;
      dangerRequirement=75;
      dangerLevel = 0;
@@ -56,15 +56,15 @@
        //System.out.println(dangerLevel);
        //if( (myX - 500)*(myX - 500) + (myY - 500)*(myY - 500) >= radii[dangerLevel]*radii[dangerLevel]){
        if(Math.pow(myX-500,2)+Math.pow(myY-500,2)<Math.pow(radii[dangerLevel],2)){
-         show = false;
+         showw = false;
        }
      }else{
-       show = false;
+       showw = false;
      }
    }
 
    void show(){
-     if(show){ 
+     if(showw){ 
        fill(myCol1,myCol2,myCol3);
        ellipse(myX,myY,5,5);
      }
