@@ -27,7 +27,7 @@
      globalDangerLevel++;
    }
    globalDanger++;
-   System.out.println(globalDangerLevel);
+   //System.out.println(globalDangerLevel);
    fill(#FF0000);
    ellipse(500,500,radii[globalDangerLevel]*2,radii[globalDangerLevel]*2);
    //Make the text 
@@ -86,11 +86,11 @@
        //show = true;
      }
      if(dangerLevel<17){
-       System.out.println(Math.abs(myX-500));
-       System.out.println(Math.abs(myY-500));
-       System.out.println(Math.abs(myX-500)+Math.abs(myY-500));
-       System.out.println(Math.abs(radii[dangerLevel]));
-       System.out.println(dangerLevel);
+       //System.out.println(Math.abs(myX-500));
+       //System.out.println(Math.abs(myY-500));
+       //System.out.println(Math.abs(myX-500)+Math.abs(myY-500));
+       //System.out.println(Math.abs(radii[dangerLevel]));
+       //System.out.println(dangerLevel);
        //if( (myX - 500)*(myX - 500) + (myY - 500)*(myY - 500) >= radii[dangerLevel]*radii[dangerLevel]){
        if(Math.pow(myX-500,2)+Math.pow(myY-500,2)<Math.pow(radii[dangerLevel],2)){
          show = false;
@@ -105,7 +105,7 @@
        fill(myCol1,myCol2,myCol3);
        ellipse(myX,myY,5,5);
      }
-     System.out.println(show);
+     //System.out.println(show);
    }
    //lots of java!   
  }    
