@@ -1,40 +1,3 @@
- //declare bacteria variables here   
- int[] radii = {0,0,100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
- int globalDanger = 0;
- int globalDangerLevel = 0;
- Bacteria[] bob = new Bacteria[20];
- void setup()   
- {     
-   size(1500,1500);
-   //initialize bacteria variables here   
-   for (int i = 0; i<bob.length;i++){
-     bob[i] = new Bacteria();
-   }
-   
- }   
- void draw()   
- {    
-   background(255);
-   for(int i = 0; i<bob.length;i++){
-     bob[i].move();
-     bob[i].show();
-     bob[i].danger++;
-     //System.out.println(Math.abs(bob[i].myX-500)+Math.abs(bob[i].myY-500));
-     //System.out.println(radii[bob[i].dangerLevel]);
-   }
-   
-   if(globalDanger%75==0){
-     globalDangerLevel++;
-   }
-   globalDanger++;
-   //System.out.println(globalDangerLevel);
-   fill(#FF0000);
-   ellipse(500,500,radii[globalDangerLevel]*2,radii[globalDangerLevel]*2);
-   //Make the text 
-   textSize(32);
-   fill(0);
-   text("RUN!",465,400);
- }  
  class Bacteria    
  {     
    int myX,myY;
@@ -108,4 +71,42 @@
      //System.out.println(show);
    }
    //lots of java!   
- }    
+ }
+ //declare bacteria variables here   
+ int[] radii = {0,0,100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
+ int globalDanger = 0;
+ int globalDangerLevel = 0;
+ Bacteria[] bob = new Bacteria[20];
+ void setup()   
+ {     
+   size(1500,1500);
+   //initialize bacteria variables here   
+   for (int i = 0; i<bob.length;i++){
+     bob[i] = new Bacteria();
+   }
+   
+ }   
+ void draw()   
+ {    
+   background(255);
+   for(int i = 0; i<bob.length;i++){
+     bob[i].move();
+     bob[i].show();
+     bob[i].danger++;
+     //System.out.println(Math.abs(bob[i].myX-500)+Math.abs(bob[i].myY-500));
+     //System.out.println(radii[bob[i].dangerLevel]);
+   }
+   
+   if(globalDanger%75==0){
+     globalDangerLevel++;
+   }
+   globalDanger++;
+   //System.out.println(globalDangerLevel);
+   fill(#FF0000);
+   ellipse(500,500,radii[globalDangerLevel]*2,radii[globalDangerLevel]*2);
+   //Make the text 
+   textSize(32);
+   fill(0);
+   text("RUN!",465,400);
+ }  
+    
